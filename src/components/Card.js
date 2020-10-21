@@ -24,7 +24,23 @@ const Card = () => {
           <h4>{name}</h4>
           <p>@{twitter_username || name}</p>
         </div>
+        <a href={html_url} target='_blank'>
+          follow
+        </a>
       </header>
+
+      <p className='bio'>{bio}</p>
+      <div className='links'>
+        <p>
+          <MdBusiness /> {company}
+        </p>
+        <p>
+          <MdLocationOn /> {location}
+        </p>
+        <a href={`https://${blog}`}>
+          <MdLink /> {blog}
+        </a>
+      </div>
     </Wrapper>
   );
 };
